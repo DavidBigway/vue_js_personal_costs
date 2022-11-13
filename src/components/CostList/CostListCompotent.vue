@@ -3,10 +3,7 @@
     <button type="button" class="btn btn-success" v-on:click="show">
       ADD NEW COST <span>+</span>
     </button>
-    <ItemAddingPopup
-      v-show="popupState"
-      :costItemCollection="$props.costItemCollection"
-    />
+    <ItemAddingPopup v-show="popupState" />
     <table class="cost-table table">
       <thead>
         <tr>
@@ -52,7 +49,6 @@
 import { ItemAddingPopup } from '../Popup/'
 
 export default {
-  props: ['costItemCollection'],
   name: 'CostListComponent',
   comments: {
     ItemAddingPopup,
@@ -78,10 +74,10 @@ export default {
       return posts.slice(from, to)
     },
     setPosts() {
-      this.posts = this.paginate(this.$props.costItemCollection)
+      this.posts = this.paginate(this.$store.state.CostItemCollection)
     },
     setPages() {
-      this.pages = Math.ceil(this.$props.costItemCollection.length / 5)
+      this.pages = Math.ceil(this.$store.state.CostItemCollection.length / 5)
     },
     setPage(num) {
       if (num >= 1 && num <= this.pages) {
