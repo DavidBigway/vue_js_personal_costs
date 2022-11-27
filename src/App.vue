@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <CostList />
+    <header>
+      <router-link to="/">Главная</router-link>
+      <router-link to="/cost">Рассчитать</router-link>
+    </header>
+    <router-view />
   </div>
 </template>
 
 <script>
 import data from './assets/costListData.json'
-import { CostList } from './components'
 
 export default {
   name: 'App',
@@ -14,9 +17,6 @@ export default {
     show(condition) {
       condition = !condition
     },
-  },
-  components: {
-    CostList,
   },
   created() {
     data[0].data.forEach((item, index) => {
