@@ -13,11 +13,12 @@
         </div>
         <select class="form-select mb-3" v-model="category" required>
           <option value="" disabled selected>Payment description</option>
-          <option value="Food">Food</option>
-          <option value="Transport">Transport</option>
-          <option value="Housing">Housing</option>
-          <option value="Healthcare">Healthcare</option>
-          <option value="Clothing">Clothing</option>
+          <option
+            :value="category.value"
+            v-for="category in $store.state.popupState.categories"
+          >
+            {{ category.title }}
+          </option>
         </select>
         <div class="mb-3">
           <input
@@ -43,7 +44,6 @@
 import CostItem from '../CostItem'
 
 export default {
-  props: ['costItemCollection'],
   name: 'ItemAddingPopup',
   data() {
     return {
@@ -55,9 +55,9 @@ export default {
   methods: {
     addCostItem(date, category, value) {
       if (date != '' && category != '') {
-        this.$props.costItemCollection.push(
+        this.$store.state.CostItemCollection.push(
           new CostItem(
-            this.$props.costItemCollection.length + 1,
+            this.$store.state.CostItemCollection.length + 1,
             date,
             category,
             value

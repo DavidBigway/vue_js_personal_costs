@@ -1,82 +1,58 @@
 [
   {
-    "date": "28.03.2020",
-    "category": "Food",
-    "value": 123
-  },
-  {
-    "date": "22.03.2020",
-    "category": "Clothing",
-    "value": 534
-  },
-  {
-    "date": "08.03.2020",
-    "category": "Housing",
-    "value": 4221
-  },
-  {
-    "date": "24.03.2020",
-    "category": "Transport",
-    "value": 456
-  },
-  {
-    "date": "22.03.2020",
-    "category": "Clothing",
-    "value": 534
-  },
-  {
-    "date": "08.03.2020",
-    "category": "Housing",
-    "value": 4221
-  },
-  {
-    "date": "24.03.2020",
-    "category": "Transport",
-    "value": 456
-  },
-  {
-    "date": "22.03.2020",
-    "category": "Clothing",
-    "value": 534
-  },
-  {
-    "date": "08.03.2020",
-    "category": "Housing",
-    "value": 4221
-  },
-  {
-    "date": "24.03.2020",
-    "category": "Transport",
-    "value": 456
-  },
-  {
-    "date": "22.03.2020",
-    "category": "Clothing",
-    "value": 534
-  },
-  {
-    "date": "08.03.2020",
-    "category": "Housing",
-    "value": 4221
-  },
-  {
-    "date": "24.03.2020",
-    "category": "Transport",
-    "value": 456
-  },
-  {
-    "date": "22.03.2020",
-    "category": "Clothing",
-    "value": 534
-  },
-  {
-    "date": "08.03.2020",
-    "category": "Housing",
-    "value": 4221
-  },
-  {
-    "date": "24.03.2020",
-    "category": "Transport",
-    "value": 456
+    "data": [
+      {
+        "date": "28.03.2020",
+        "category": "Food",
+        "value": 123
+      },
+      {
+        "date": "22.03.2020",
+        "category": "Clothing",
+        "value": 534
+      },
+      {
+        "date": "08.03.2020",
+        "category": "Housing",
+        "value": 4221
+      },
+      {
+        "date": "24.03.2020",
+        "category": "Transport",
+        "value": 456
+      },
+      {
+        "date": "22.03.2020",
+        "category": "Clothing",
+        "value": 534
+      },
+      {
+        "date": "08.03.2020",
+        "category": "Housing",
+        "value": 4221
+      },
+      {
+        "date": "24.03.2020",
+        "category": "Transport",
+        "value": 456
+      },
+      {
+        "date": "22.03.2020",
+        "category": "Clothing",
+        "value": 534
+      },
+      {
+        "date": "08.03.2020",
+        "category": "Housing",
+        "value": 4221
+      }
+    ],
+    "categories": [
+      { "value": "Food", "title": "Еда" },
+      { "value": "Transport", "title": "Транспорт" },
+      { "value": "Housing", "title": "Жилье" },
+      { "value": "Healthcare", "title": "Здоровье" },
+      { "value": "Clothing", "title": "Одежда" }
+    ]
   }
 ]

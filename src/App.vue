@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <CostList :costItemCollection="CostItemCollection" />
+    <CostList />
   </div>
 </template>
 
@@ -10,11 +10,6 @@ import { CostList } from './components'
 
 export default {
   name: 'App',
-  data() {
-    return {
-      CostItemCollection: [],
-    }
-  },
   methods: {
     show(condition) {
       condition = !condition
@@ -24,8 +19,11 @@ export default {
     CostList,
   },
   created() {
-    data.forEach((item, index) => {
-      this.CostItemCollection.push({ num: index + 1, ...item })
+    data[0].data.forEach((item, index) => {
+      this.$store.commit('loadCollection', { num: index + 1, ...item })
+    })
+    data[0].categories.forEach((item, index) => {
+      this.$store.commit('loadCategories', { num: index + 1, ...item })
     })
   },
 }
